@@ -28,35 +28,40 @@ function Game() {
 
     return (
         <div className="app">
-            <div className="console">
-                <div className="board-wrapper">
-                <Board snake={snake} food={food} />
+            <div className="console-wrapper">
+                <div className="tab">React Snake Game</div>
 
-                {isGameOver && (
-                    <div className="game-over-overlay">
-                    GAME OVER
+                <div className="console">
+                    <div className="board-wrapper">
+                    <Board snake={snake} food={food} />
+
+                    {isGameOver && (
+                        <div className="game-over-overlay">
+                            GAME OVER
+                        </div>
+                    )}
                     </div>
-                )}
-                </div>            
-                <aside className="panel">
+
+                    <aside className="panel">
                     <p>// use keyboard</p>
                     <p>// arrows to play</p>
 
                     <div className="score">
-                    <Score score={score} />
+                        <Score score={score} />
                     </div>
-                    
+
                     <button
                         className="start"
                         onClick={() => {
-                            reset();
-                            setIsRunning(true);
-                            setDirection("RIGHT");
+                        reset();
+                        setIsRunning(true);
+                        setDirection("RIGHT");
                         }}
-                        >
+                    >
                         {isGameOver ? "restart" : "start-game"}
                     </button>
-                </aside>
+                    </aside>
+                </div>
             </div>
         </div>
     );
