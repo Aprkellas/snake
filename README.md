@@ -1,7 +1,7 @@
 
-<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/6b7a23db-508d-4d55-9664-2a6b5f3895a0" />
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/9a43a4da-5acb-47c9-b5a9-2ef959b2ac2a" />
 
-<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/828455c0-bdd7-4dd3-962b-00cfb1d447e1" />
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/1598ed60-a7da-4728-b855-2cdfdd40f273" />
 
 
 # React Snake 
