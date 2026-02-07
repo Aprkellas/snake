@@ -54,30 +54,6 @@ This keeps logic testable and UI dumb.
 
 ---
 
-## Folder Structure
-src/
-├─ components/
-│ ├─ Game/
-│ ├─ Board/
-│ ├─ Cell/
-│ └─ UI/
-│
-├─ hooks/
-│ ├─ useSnake.js
-│ ├─ useGameLoop.js
-│ └─ useKeyboard.js
-│
-├─ utils/
-│ ├─ helpers.js
-│ └─ constants.js
-│
-├─ App.jsx
-├─ index.js
-└─ index.css
-
-
----
-
 ## Controls
 
 - Arrow keys — move the snake
