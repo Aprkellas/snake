@@ -1,5 +1,5 @@
-function Score({ value }) {
-  return <div>Score: {value}</div>;
+function Score({ score }) {
+  return <div>Score: {score}</div>;
 }
 
 export default Score;

@@ -16,8 +16,9 @@ function Game() {
         snake,
         moveSnake,
         isGameOver,
-        score
-    } = useSnake();
+        score,
+        reset,
+        } = useSnake();
 
     useKeyboard(direction, setDirection);
 
@@ -28,20 +29,34 @@ function Game() {
     return (
         <div className="app">
             <div className="console">
-            <Board snake={snake} food={food} />
-            <aside className="panel">
-                <p>// use keyboard</p>
-                <p>// arrows to play</p>
-                <div className="score">
-                  <Score score={score} />
-                </div>
-                <button 
-                    className="start"   
-                    onClick={() => setIsRunning(true)}
-                >
-                    start-game
-                </button>
-            </aside>
+                <div className="board-wrapper">
+                <Board snake={snake} food={food} />
+
+                {isGameOver && (
+                    <div className="game-over-overlay">
+                    GAME OVER
+                    </div>
+                )}
+                </div>            
+                <aside className="panel">
+                    <p>// use keyboard</p>
+                    <p>// arrows to play</p>
+
+                    <div className="score">
+                    <Score score={score} />
+                    </div>
+                    
+                    <button
+                        className="start"
+                        onClick={() => {
+                            reset();
+                            setIsRunning(true);
+                            setDirection("RIGHT");
+                        }}
+                        >
+                        {isGameOver ? "restart" : "start-game"}
+                    </button>
+                </aside>
             </div>
         </div>
     );
