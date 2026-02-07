@@ -1,0 +1,16 @@
+.cell {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: #081021;
+}
+
+.cell.snake {
+  background: linear-gradient(180deg, #48ffd2, #2cbfa5);
+  box-shadow: 0 0 8px rgba(72,255,210,0.6);
+}
+
+.cell.food {
+  background: #48ffd2;
+  box-shadow: 0 0 10px rgba(72,255,210,0.9);
+}

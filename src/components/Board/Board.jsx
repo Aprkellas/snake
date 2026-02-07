@@ -1,5 +1,6 @@
 import Cell from "../Cell/Cell";
 import { GRID_SIZE } from "../../utils/constants";
+import "./Board.css";
 
 function Board({ snake, food }) {
   return (
