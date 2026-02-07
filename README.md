@@ -1,70 +1,92 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/6b7a23db-508d-4d55-9664-2a6b5f3895a0" />
 
-## Available Scripts
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/828455c0-bdd7-4dd3-962b-00cfb1d447e1" />
 
-In the project directory, you can run:
 
-### `npm start`
+# React Snake 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A classic Snake game built with **React** to practice modern React patterns:
+- custom hooks
+- game loops
+- keyboard input
+- state-driven rendering
+- clean separation of logic and UI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The project is intentionally written without external game libraries to focus on fundamentals.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- Start / restart game
+- Keyboard controls (arrow keys)
+- Random food spawning
+- Snake growth
+- Score tracking
+- Wall collision
+- Self collision
+- Game over overlay
+- Styled arcade-like UI
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Architecture Overview
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app is split into **three main layers**:
 
-### `npm run eject`
+### 1. Game Logic (Hooks)
+- `useSnake` — all Snake rules (movement, collisions, score)
+- `useGameLoop` — time-based updates
+- `useKeyboard` — keyboard input handling
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Rendering (Components)
+- `Game` — orchestration and state wiring
+- `Board` — grid layout
+- `Cell` — individual board tiles
+- `Score` — UI display
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. Utilities
+- `helpers` — random food generation
+- `constants` — grid size, configuration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This keeps logic testable and UI dumb.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Folder Structure
+src/
+├─ components/
+│ ├─ Game/
+│ ├─ Board/
+│ ├─ Cell/
+│ └─ UI/
+│
+├─ hooks/
+│ ├─ useSnake.js
+│ ├─ useGameLoop.js
+│ └─ useKeyboard.js
+│
+├─ utils/
+│ ├─ helpers.js
+│ └─ constants.js
+│
+├─ App.jsx
+├─ index.js
+└─ index.css
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Controls
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Arrow keys — move the snake
+- Start / Restart button — begin a new game
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Getting Started
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm install
+npm start
